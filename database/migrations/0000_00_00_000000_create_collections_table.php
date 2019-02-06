@@ -16,6 +16,8 @@ class CreateCollectionsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->text('description')->nullable();
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on(Config::get('amethyst.collection.data.collection.table'));
             $table->timestamps();
             $table->softDeletes();
         });
