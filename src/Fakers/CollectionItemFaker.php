@@ -18,6 +18,7 @@ class CollectionItemFaker extends Faker
         $bag = new Bag();
         $bag->set('name', $faker->name);
         $bag->set('description', $faker->text);
+        $bag->set('collection', CollectionFaker::make()->parameters()->toArray());
 
         return $bag;
     }

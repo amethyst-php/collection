@@ -21,4 +21,12 @@ class CollectionItem extends Model implements EntityContract
         $this->ini('amethyst.collection.data.collection-item');
         parent::__construct($attributes);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function collection()
+    {
+        return $this->belongsTo(Collection::class);
+    }
 }

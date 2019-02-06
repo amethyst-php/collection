@@ -2,6 +2,7 @@
 
 namespace Railken\Amethyst\Schemas;
 
+use Railken\Amethyst\Managers\CollectionManager;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
@@ -20,6 +21,10 @@ class CollectionItemSchema extends Schema
                 ->setRequired(true)
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('description'),
+            Attributes\BelongsToAttribute::make('collection_id')
+                ->setRelationName('collection')
+                ->setRelationManager(CollectionManager::class)
+                ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
