@@ -11,4 +11,11 @@ return [
     'authorizer' => Railken\Amethyst\Authorizers\CollectionItemAuthorizer::class,
     'faker'      => Railken\Amethyst\Fakers\CollectionItemFaker::class,
     'manager'    => Railken\Amethyst\Managers\CollectionItemManager::class,
+    'attributes' => [
+        'collectionable' => [
+            'options' => [
+                Railken\Amethyst\Models\Foo::class => Railken\Amethyst\Managers\FooManager::class,
+            ],
+        ],
+    ],
 ];

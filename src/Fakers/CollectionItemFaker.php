@@ -19,6 +19,8 @@ class CollectionItemFaker extends Faker
         $bag->set('name', $faker->name);
         $bag->set('description', $faker->text);
         $bag->set('collection', CollectionFaker::make()->parameters()->toArray());
+        $bag->set('collectionable_type', \Railken\Amethyst\Models\Foo::class);
+        $bag->set('collectionable', FooFaker::make()->parameters()->toArray());
 
         return $bag;
     }

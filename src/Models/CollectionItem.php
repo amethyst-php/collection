@@ -29,4 +29,12 @@ class CollectionItem extends Model implements EntityContract
     {
         return $this->belongsTo(Collection::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     */
+    public function collectionable()
+    {
+        return $this->morphTo();
+    }
 }
