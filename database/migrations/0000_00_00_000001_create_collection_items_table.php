@@ -14,7 +14,7 @@ class CreateCollectionItemsTable extends Migration
     {
         Schema::create(Config::get('amethyst.collection.data.collection-item.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->integer('collection_id')->unsigned();
             $table->foreign('collection_id')->references('id')->on(Config::get('amethyst.collection.data.collection.table'));

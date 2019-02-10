@@ -20,9 +20,7 @@ class CollectionItemSchema extends Schema
 
         return [
             Attributes\IdAttribute::make(),
-            Attributes\TextAttribute::make('name')
-                ->setRequired(true)
-                ->setUnique(true),
+            Attributes\TextAttribute::make('name'),
             Attributes\LongTextAttribute::make('description'),
             Attributes\BelongsToAttribute::make('collection_id')
                 ->setRelationName('collection')
