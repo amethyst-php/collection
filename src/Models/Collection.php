@@ -29,4 +29,20 @@ class Collection extends Model implements EntityContract
     {
         return $this->belongsTo(Collection::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function children()
+    {
+        return $this->hasMany(Collection::class, 'parent_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function items()
+    {
+        return $this->hasMany(CollectionItem::class);
+    }
 }
