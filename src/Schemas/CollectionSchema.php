@@ -4,8 +4,8 @@ namespace Railken\Amethyst\Schemas;
 
 use Railken\Amethyst\Managers\CollectionManager;
 use Railken\Lem\Attributes;
-use Railken\Lem\Schema;
 use Railken\Lem\Contracts\EntityContract;
+use Railken\Lem\Schema;
 
 class CollectionSchema extends Schema
 {
@@ -25,7 +25,7 @@ class CollectionSchema extends Schema
                 ->setRelationName('parent')
                 ->setRelationManager(CollectionManager::class),
             Attributes\BooleanAttribute::make('default')
-                ->setDefault(function(EntityContract $entity) {
+                ->setDefault(function (EntityContract $entity) {
                     return false;
                 }),
             Attributes\CreatedAtAttribute::make(),
