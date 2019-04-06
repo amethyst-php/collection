@@ -12,4 +12,4 @@ return [
         'children' => 'Figli',
         'items' => 'Elementi'
     ]
-]
+];
