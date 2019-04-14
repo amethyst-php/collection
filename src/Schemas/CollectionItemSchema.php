@@ -16,8 +16,6 @@ class CollectionItemSchema extends Schema
      */
     public function getAttributes()
     {
-        $collectionableConfig = Config::get('amethyst.collection.data.collection-item.attributes.collectionable.options');
-
         return [
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('name'),
@@ -26,12 +24,12 @@ class CollectionItemSchema extends Schema
                 ->setRelationName('collection')
                 ->setRelationManager(CollectionManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('collectionable_type', array_keys($collectionableConfig))
+            Attributes\EnumAttribute::make('collectionable_type', app('amethyst')->getMorphListable('collection-item', 'collectionable'))
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('collectionable_id')
                 ->setRelationKey('collectionable_type')
                 ->setRelationName('collectionable')
-                ->setRelations($collectionableConfig)
+                ->setRelations(app('amethyst')->getMorphRelationable('collection-item', 'collectionable'))
                 ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),

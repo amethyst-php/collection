@@ -13,9 +13,7 @@ return [
     'manager'    => Railken\Amethyst\Managers\CollectionItemManager::class,
     'attributes' => [
         'collectionable' => [
-            'options' => [
-                Railken\Amethyst\Models\Foo::class => Railken\Amethyst\Managers\FooManager::class,
-            ],
+            'options' => [],
         ],
     ],
 ];
