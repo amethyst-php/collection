@@ -23,7 +23,7 @@ class CollectionManager extends Manager
     {
         return [
             'tree' => [
-                'parent'   => 'parent_id',
+                'parent' => 'parent_id',
             ],
         ];
     }
