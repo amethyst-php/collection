@@ -29,7 +29,7 @@ class CollectionItem extends Model implements EntityContract
      */
     public function collection(): BelongsTo
     {
-        return $this->belongsTo(Collection::class);
+        return $this->belongsTo(config('amethyst.collection.data.collection.model'));
     }
 
     /**

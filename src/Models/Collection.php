@@ -29,7 +29,7 @@ class Collection extends Model implements EntityContract
      */
     public function parent(): BelongsTo
     {
-        return $this->belongsTo(Collection::class);
+        return $this->belongsTo(config('amethyst.collection.data.collection.model'));
     }
 
     /**
@@ -37,7 +37,7 @@ class Collection extends Model implements EntityContract
      */
     public function children(): HasMany
     {
-        return $this->hasMany(Collection::class, 'parent_id');
+        return $this->hasMany(config('amethyst.collection.data.collection.model'), 'parent_id');
     }
 
     /**
@@ -45,6 +45,6 @@ class Collection extends Model implements EntityContract
      */
     public function items(): HasMany
     {
-        return $this->hasMany(CollectionItem::class);
+        return $this->hasMany(config('amethyst.collection.data.collection-item.model'));
     }
 }
