@@ -24,6 +24,7 @@ class CollectionSchema extends Schema
             Attributes\BelongsToAttribute::make('parent_id')
                 ->setRelationName('parent')
                 ->setRelationManager(CollectionManager::class),
+            Attributes\NumberAttribute::make('weight'),
             Attributes\BooleanAttribute::make('default')
                 ->setDefault(function (EntityContract $entity) {
                     return false;
