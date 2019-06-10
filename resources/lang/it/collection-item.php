@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'CollectionItem',
-    'description' => 'CollectionItem',
+    'name' => 'Collection Item',
+    'description' => 'Collection Item',
     'attributes' => []
 ];
