@@ -2,7 +2,7 @@
 
 return [
     'enabled'    => true,
-    'controller' => Railken\Amethyst\Http\Controllers\Admin\CollectionsController::class,
+    'controller' => Amethyst\Http\Controllers\Admin\CollectionsController::class,
     'router'     => [
         'as'     => 'collection.',
         'prefix' => '/collections',

@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Managers;
+namespace Amethyst\Tests\Managers;
 
-use Railken\Amethyst\Fakers\CollectionItemFaker;
-use Railken\Amethyst\Managers\CollectionItemManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Fakers\CollectionItemFaker;
+use Amethyst\Managers\CollectionItemManager;
+use Amethyst\Tests\BaseTest;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
 class CollectionItemTest extends BaseTest
