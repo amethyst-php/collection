@@ -5,6 +5,14 @@ namespace Amethyst\Managers;
 use Amethyst\Common\ConfigurableManager;
 use Railken\Lem\Manager;
 
+/**
+ * @method \Amethyst\Models\Collection newEntity()
+ * @method \Amethyst\Schemas\CollectionSchema getSchema()
+ * @method \Amethyst\Repositories\CollectionRepository getRepository()
+ * @method \Amethyst\Serializers\CollectionSerializer getSerializer()
+ * @method \Amethyst\Validators\CollectionValidator getValidator()
+ * @method \Amethyst\Authorizers\CollectionAuthorizer getAuthorizer()
+ */
 class CollectionManager extends Manager
 {
     use ConfigurableManager;
