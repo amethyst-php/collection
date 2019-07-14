@@ -6,12 +6,12 @@ use Amethyst\Common\ConfigurableManager;
 use Railken\Lem\Manager;
 
 /**
- * @method \Amethyst\Models\CollectionItem newEntity()
- * @method \Amethyst\Schemas\CollectionItemSchema getSchema()
+ * @method \Amethyst\Models\CollectionItem                 newEntity()
+ * @method \Amethyst\Schemas\CollectionItemSchema          getSchema()
  * @method \Amethyst\Repositories\CollectionItemRepository getRepository()
- * @method \Amethyst\Serializers\CollectionItemSerializer getSerializer()
- * @method \Amethyst\Validators\CollectionItemValidator getValidator()
- * @method \Amethyst\Authorizers\CollectionItemAuthorizer getAuthorizer()
+ * @method \Amethyst\Serializers\CollectionItemSerializer  getSerializer()
+ * @method \Amethyst\Validators\CollectionItemValidator    getValidator()
+ * @method \Amethyst\Authorizers\CollectionItemAuthorizer  getAuthorizer()
  */
 class CollectionItemManager extends Manager
 {
