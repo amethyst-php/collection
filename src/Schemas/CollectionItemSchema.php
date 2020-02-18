@@ -23,12 +23,12 @@ class CollectionItemSchema extends Schema
                 ->setRelationName('collection')
                 ->setRelationManager(CollectionManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('collectionable_type', app('amethyst')->getMorphListable('collection-item', 'collectionable'))
+            Attributes\EnumAttribute::make('collectionable_type', app('amethyst')->getDataNames())
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('collectionable_id')
                 ->setRelationKey('collectionable_type')
                 ->setRelationName('collectionable')
-                ->setRelations(app('amethyst')->getMorphRelationable('collection-item', 'collectionable'))
+                ->setRelations(app('amethyst')->getDataManagers())
                 ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
