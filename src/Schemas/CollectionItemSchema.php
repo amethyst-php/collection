@@ -23,7 +23,7 @@ class CollectionItemSchema extends Schema
                 ->setRelationName('collection')
                 ->setRelationManager(CollectionManager::class)
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('collectionable_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('collectionable_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('collectionable_id')
                 ->setRelationKey('collectionable_type')
